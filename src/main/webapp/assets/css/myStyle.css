@@ -1,0 +1,163 @@
+ul{
+	list-style: none;
+}
+
+.nav_title{
+	font-size: 20px;
+	font-weight: 700;
+	font-family: sans-serif;
+}
+.li .course{
+	float: left;
+}
+.li .course ul{
+	list-style: none;
+}
+.li .course ul li{
+	margin-bottom: 20px;
+}
+.li .course ul li img{
+	width:180px;
+	height: 300px;
+	margin-bottom: 15px;
+}
+.user_img{
+	width: 120px;
+	height: 120px;
+}
+.user_name{
+	display: block;
+	text-align: center;
+	margin-top: 40px;
+}
+.li .dis-op{
+	float: right;
+	margin:10px 10px;
+}
+.dis-ul{
+	margin-bottom: 50px;
+	border-bottom: 1px solid #666;
+}
+.reply{
+	float: right;
+	display: none;
+	margin-top: 40px;
+
+}
+
+/*试卷管理-添加试卷*/
+.que{
+	display: block;
+	margin-bottom: 20px;
+}
+.describe_num{
+	display: block;
+	/*width: 10px;
+	height: 10px;*/
+	float: left;
+}
+.describe{
+	float: left;
+	margin-left: 5px;
+	width: 800px;
+	word-wrap:break-word;/*p标签英文和数字的自动换行，注意p标签要设置宽度*/
+}
+.options{
+	margin-left: 10px;
+}
+.options_describe{
+	/*width: 500px;*/
+	word-wrap:break-word;
+}
+
+.btn-del{
+	float: right;
+	margin-right: 10px;
+}
+
+.describe-textarea{
+	overflow: auto;
+}
+.new-paper-title{
+	width: 150px;
+	height: 40px;
+	margin: 10px auto;
+}
+.new-paper-title input{
+	width: 300px;
+	height: 40px;
+	border:1px solid #ddd;
+	border-radius: 5px;
+}
+/*dis-detail*/
+.btn-rep{
+	border: none;
+	background: #fff;
+}
+.btn-deletedis{
+	border: none;
+	background: #fff;
+}
+.avatar{
+	
+    width: 120px;
+    min-height: 120px;
+    background-color: #363f4c;
+    display: block;
+    padding: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 4px #c1c1cf;
+    -moz-box-shadow: 0 0 4px #000;
+    box-shadow: 0 0 4px #000;
+    
+}
+
+.arrow{
+	margin-top:10px;
+	display: block;
+}
+
+.table_container{
+	margin: 100px 50px;
+}
+	.table{
+		box-shadow: 6px 6px 1px 0 rgba(0,0,0,.15);
+	}			
+		.table thead{
+			background: rgba(0,0,0,0.2);
+		    padding: 0px 10px;
+		    color: #fff;
+			
+		}
+		.table th,td{
+			font-size: 14px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}			    
+	.table_container .table_img{
+		width: 45%;
+		float: right;
+		height: 300px;
+		background: #fff;
+		box-shadow: 6px 6px 1px 3px rgba(0,0,0,.15);
+		overflow: hidden;
+	}
+	.table_container .table_img img{
+		display: block;
+		margin: auto;
+		height: 300px;
+		
+	}	
+
+body {
+    background: #e2e2e2;
+    background-image: url(./sm_b13.png);
+}
+a:hover{
+	text-decoration: none;
+}
+#app{
+	color: #303133;
+}

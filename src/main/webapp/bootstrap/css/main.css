@@ -1,0 +1,400 @@
+@CHARSET "UTF-8";
+.body{
+	text-align:center;
+}
+.background{
+	background:url(../images/11.jpg);
+	background-attachment: fixed;
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+	
+}
+
+.navbar-custom {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    background-color: #000;
+}
+.navbar-custom{
+	padding: 20px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.my-container{
+	position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+   
+    height: inherit;
+    margin: auto;
+}
+a{
+	color: #D0E6FA;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #F4D03F;
+}
+a:link {
+text-decoration: none;
+
+}
+a:visited {
+text-decoration: none;
+
+}
+a:active {
+text-decoration: none;
+
+} 
+
+.logo a{
+    text-decoration: none;
+    font-size: 24px;
+	font-weight: 800;
+    }
+   .navbar-custom .nav li a:hover {
+    outline: 0;
+    color: #F4D03F;
+    background-color: transparent;
+    }/*去除阴影*/
+    .nav .navbar-nav ul li a:hover{
+    outline: 0;
+    color: #F4D03F;
+    background-color: transparent;
+    }
+    .login{
+    float:right;
+    }
+    .loginbox{
+    width:50%; margin-top:10%; margin:auto; padding:28px;
+    height:350px; border:1px #111 solid;
+    display:none;/* 默认对话框隐藏 */
+    }
+    .loginbox.show{display:block;}
+    .loginbox.x{font-size:18px; text-align:right; display:block;}
+    .loginbox.input{width:80%; font-size:18px; margin-top:18px;}
+    .content{
+    background: transparent;/*设置背景颜色透明*/
+	height: 900px;
+	width:1170px;
+	margin:0 auto;
+    }
+    .content .inner{
+    max-width: 400px;
+	text-align: center;
+	margin: 0 auto;/*文字块居中*/
+	position: relative;
+	top:40%;/*文字块上下居中*/
+    }
+    h1{
+    font-weight:800;
+    }
+    .sign{
+    font-size:20px;
+    font-weight:500;}
+    footer{
+ 	min-height: 50px;
+ 	background: transparent;
+ 	
+   }
+   .copy{
+   color:white;
+   }
+   .copy{
+ 	margin:0 auto;
+ 	padding: 10px;
+ 	text-align: center;
+   }
+   h3{
+   font-size:16px;
+   font-weight:700;
+   margin-right:6px;
+   }
+   .form-group{
+   margin-bottom:15px;
+   }
+   nav .top_nav_right ul li a{
+   height: inherit;/*继承父元素的高度*/
+   }
+   
+   .addform{
+   width:260px;
+   }
+   .courseform-group{
+   margin-bottom:15px;
+   }
+   
+   .updatebox{
+   display:none;
+   background-color:white;
+   width:350px;
+   height:300px;
+   z-index:2px;
+   position:absolute;
+   border:1px solid grey;
+   left:584.5px;
+   top:115.5px;"
+   }
+   
+   .update-top{
+   width:auto;height:45px;
+   background-color:white;
+   border:1px solid silver; 
+   border-left:none;
+   border-right:none;
+   border-top:none;
+   }
+   
+   .x{
+   float:right;
+   color:black;
+   font-size:20px;
+   margin-right:2px;
+   text-decoration:none;
+   }
+   .updatecontent{
+   width: 260px; 
+   margin-left: 40px;
+   margin-top: 18px;
+   }
+   
+   
+   .btn-ok{
+   background-color: #71A83A;
+   }
+
+   .sub{
+    width: 788px;
+    height: 150px;
+    padding:10px 25px;
+    margin:20px 10px;
+   }
+/*添加题目，左侧选项栏*/
+   .types{
+    float:left;
+    width:300px;
+    height: 800px;
+   }
+   .types-body{
+    height: 800px;
+   }
+/*添加题目右侧部分*/
+   .subs{
+    float:left;
+    width:850px;
+    height: 800px;
+    overflow: auto;
+   }
+   .subs-body{
+    height: 750px;
+   }
+   /*完成按钮*/
+   .comfirm{
+    width: 800px;
+    height: 80px;
+    margin: 50px 10px 20px 10px;
+    padding: 20px 100px 20px 620px;
+   }
+   #ok-add{
+    background-color: white;
+    font-size:16px;
+    width: 80px;
+    border-radius: 8px;
+    color: black;
+    border:2px solid #4CAF50;
+    -webkit-transition-duration:0.4s;
+    transition-duration: 0.4s;
+
+   }
+   #ok-add:hover{
+    background-color:#4CAF50;
+    color:white; 
+   }
+   /*左侧选项栏div块*/
+   .chooselist{
+    border: none;
+   }
+   .choosegroup{
+    height: 40px;
+   }
+   /*添加单选题按钮*/
+   .addbtn{
+    width: 200px;
+    border: none;
+    padding:10px 30px 0px 30px; 
+    text-align: center;
+    font-size: 16px;
+    background-color: transparent;
+   }
+   /*试卷*/
+   .content-body{
+    height: 800px;
+   }
+   .exercisecontent{
+    height: 850px;
+    padding: 20px 10px;
+    overflow: auto;
+   }
+   .testcontent{
+    width: 700px;
+    height: 750px;
+    margin: 20px auto;
+    padding: 10px 15px; 
+   }
+   .buttons{
+    width: 650px;
+    height: 60px;
+    margin:0 auto;
+    padding:10px 10px 10px 550px;
+   }
+   .addtoerror{
+    border: 2px solid #008CBA;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #008CBA;
+     -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+   }
+   .addtoerror:hover{
+    background-color: white;
+    color: black;
+   }
+   /*选择课程页面*/
+   .course-list-div{
+    height: inherit;
+    width: 240px;
+    float: left;
+    padding: 8px 5px;
+    overflow: auto;
+   }
+   
+   
+   /*===========================================================================================================
+ * main.less v0.1.0
+ * Author:Bone
+ * 2014/12/19
+ *==========================================================================================================*/
+/* global */
+* {
+    font-family: "微软雅黑";
+}
+
+.container {
+    width: 100%;
+    min-width: 500px;
+    max-width: none !important;
+}
+
+.row {
+    margin: 0px;
+}
+
+.pagination {
+    margin: 5px;
+}
+
+input[type='file']:focus, input[type='radio']:focus, input[type='checkbox']:focus, a:focus {
+    outline: none;
+}
+
+.panel {
+    margin-right: 20px;
+}
+
+/*top nav bar*/
+.sw-navbar {
+    min-height: 30px;
+    height: 30px;
+    width: 100%;
+    z-index: 99999;
+}
+
+.sw-navbar .navbar-brand {
+    height: 30px;
+    padding: 5px;
+}
+
+.sw-navbar .navbar-nav {
+    float: right;
+    display: block;
+    margin-right: 20px;
+}
+
+.sw-navbar .navbar-nav > li {
+    float: left;
+}
+
+.sw-navbar .navbar-nav > li > a {
+    height: 30px;
+    padding: 5px;
+}
+
+.main-content {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 650px;
+}
+
+.main-content .sidebar {
+    position: fixed;
+    width: 200px;
+    display: block;
+    float: left;
+    padding-left: 5px;
+}
+
+.main-content .sidebar .submenu {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.main-content .workspace {
+    margin-left: 205px;
+    margin-right: auto;
+}
+
+.sw-footer {
+    width: 100%;
+    min-height: 20px;
+}
+
+.login-panel {
+    width: 400px;
+    margin: 200px auto;
+    opacity: 0.9;
+    background: #818F98;
+    box-shadow: 0 0 20px rgba(0, 100, 200, 1);
+}
+
+.login-body {
+    background-image: url("../../img/loginbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.login-text {
+    margin: 20px;
+    width: 360px;
+}
+
+.login-inputcode {
+    width: 150px;
+    height: 34px;
+    display: inline-block;
+}

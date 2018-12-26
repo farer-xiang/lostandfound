@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lostandfound.dao.AdminMapper" >
+  <resultMap id="BaseResultMap" type="com.lostandfound.model.Admin" >
+    <id column="adminid" property="adminid" jdbcType="VARCHAR" />
+    <result column="adminpass" property="adminpass" jdbcType="VARCHAR" />
+    <result column="adminname" property="adminname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    adminid, adminpass, adminname
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin
+    where adminid = #{adminid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from admin
+    where adminid = #{adminid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.lostandfound.model.Admin" >
+    insert into admin (adminid, adminpass, adminname
+      )
+    values (#{adminid,jdbcType=VARCHAR}, #{adminpass,jdbcType=VARCHAR}, #{adminname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.lostandfound.model.Admin" >
+    insert into admin
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="adminid != null" >
+        adminid,
+      </if>
+      <if test="adminpass != null" >
+        adminpass,
+      </if>
+      <if test="adminname != null" >
+        adminname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="adminid != null" >
+        #{adminid,jdbcType=VARCHAR},
+      </if>
+      <if test="adminpass != null" >
+        #{adminpass,jdbcType=VARCHAR},
+      </if>
+      <if test="adminname != null" >
+        #{adminname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lostandfound.model.Admin" >
+    update admin
+    <set >
+      <if test="adminpass != null" >
+        adminpass = #{adminpass,jdbcType=VARCHAR},
+      </if>
+      <if test="adminname != null" >
+        adminname = #{adminname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where adminid = #{adminid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lostandfound.model.Admin" >
+    update admin
+    set adminpass = #{adminpass,jdbcType=VARCHAR},
+      adminname = #{adminname,jdbcType=VARCHAR}
+    where adminid = #{adminid,jdbcType=VARCHAR}
+  </update>
+</mapper>

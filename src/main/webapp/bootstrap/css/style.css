@@ -1,0 +1,113 @@
+@CHARSET "UTF-8";
+.body{
+	text-align:center;
+}
+.background{
+	
+	background-attachment: fixed;
+	background-position:center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	
+}
+
+.header_wrap{
+	background:#000000;
+}
+a{
+	color:white;
+}
+.logo a{
+    text-decoration: none;
+    font-size: 24px;
+	font-weight: 800;
+	color:white;
+    }
+    .a-btn{
+    color:#000000;
+    }
+    .content{
+    background: transparent;/*设置背景颜色透明*/
+	height: 700px;
+	width:1170px;
+	margin:0 auto;
+    }
+    .content .inner{
+    max-width: 400px;
+	text-align: center;
+	margin: 0 auto;/*文字块居中*/
+	position: relative;
+	top:200px;/*文字块上下居中*/
+    }
+    footer{
+ 	min-height: 50px;
+ 	background: transparent;
+ 	
+   }
+   .copy{
+   color:white;
+   }
+   .copy{
+ 	margin:0 auto;
+ 	padding: 10px;
+ 	text-align: center;
+   }
+   h3{
+   font-size:16px;
+   font-weight:700;
+   margin-right:6px;
+   }
+   .form-group{
+   margin-bottom:15px;
+   }
+   nav .top_nav_right ul li a{
+   height: inherit;/*继承父元素的高度*/
+   }
+   
+   .addform{
+   width:260px;
+   }
+   .courseform-group{
+   margin-bottom:15px;
+   }
+   
+   .updatebox{
+   display:none;
+   background-color:white;
+   width:350px;
+   height:300px;
+   z-index:2px;
+   position:absolute;
+   border:1px solid grey;
+   left:584.5px;
+   top:115.5px;"
+   }
+   
+   .update-top{
+   width:auto;height:45px;
+   background-color:white;
+   border:1px solid silver; 
+   border-left:none;
+   border-right:none;
+   border-top:none;
+   }
+   
+   .x{
+   float:right;
+   color:black;
+   font-size:20px;
+   margin-right:2px;
+   text-decoration:none;
+   }
+   .updatecontent{
+   width: 260px; 
+   margin-left: 40px;
+   margin-top: 18px;
+   }
+   .options{
+       float: left;
+   }
+   .details{
+       float: right;
+   }

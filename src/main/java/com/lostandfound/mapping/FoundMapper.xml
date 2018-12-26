@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lostandfound.dao.FoundMapper" >
+  <resultMap id="BaseResultMap" type="com.lostandfound.model.Found" >
+    <id column="fid" property="fid" jdbcType="INTEGER" />
+    <result column="fuid" property="fuid" jdbcType="VARCHAR" />
+    <result column="fimage" property="fimage" jdbcType="VARCHAR" />
+    <result column="fname" property="fname" jdbcType="VARCHAR" />
+    <result column="fstatus" property="fstatus" jdbcType="VARCHAR" />
+    <result column="fdate" property="fdate" jdbcType="DATE" />
+    <result column="fpos" property="fpos" jdbcType="VARCHAR" />
+    <result column="ftid" property="ftid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    fid, fuid, fimage, fname, fstatus, fdate, fpos, ftid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from found
+    where fid = #{fid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from found
+    where fid = #{fid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.lostandfound.model.Found" >
+    insert into found (fid, fuid, fimage, 
+      fname, fstatus, fdate, 
+      fpos, ftid)
+    values (#{fid,jdbcType=INTEGER}, #{fuid,jdbcType=VARCHAR}, #{fimage,jdbcType=VARCHAR}, 
+      #{fname,jdbcType=VARCHAR}, #{fstatus,jdbcType=VARCHAR}, #{fdate,jdbcType=DATE}, 
+      #{fpos,jdbcType=VARCHAR}, #{ftid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.lostandfound.model.Found" >
+    insert into found
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        fid,
+      </if>
+      <if test="fuid != null" >
+        fuid,
+      </if>
+      <if test="fimage != null" >
+        fimage,
+      </if>
+      <if test="fname != null" >
+        fname,
+      </if>
+      <if test="fstatus != null" >
+        fstatus,
+      </if>
+      <if test="fdate != null" >
+        fdate,
+      </if>
+      <if test="fpos != null" >
+        fpos,
+      </if>
+      <if test="ftid != null" >
+        ftid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fid != null" >
+        #{fid,jdbcType=INTEGER},
+      </if>
+      <if test="fuid != null" >
+        #{fuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fimage != null" >
+        #{fimage,jdbcType=VARCHAR},
+      </if>
+      <if test="fname != null" >
+        #{fname,jdbcType=VARCHAR},
+      </if>
+      <if test="fstatus != null" >
+        #{fstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="fdate != null" >
+        #{fdate,jdbcType=DATE},
+      </if>
+      <if test="fpos != null" >
+        #{fpos,jdbcType=VARCHAR},
+      </if>
+      <if test="ftid != null" >
+        #{ftid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.lostandfound.model.Found" >
+    update found
+    <set >
+      <if test="fuid != null" >
+        fuid = #{fuid,jdbcType=VARCHAR},
+      </if>
+      <if test="fimage != null" >
+        fimage = #{fimage,jdbcType=VARCHAR},
+      </if>
+      <if test="fname != null" >
+        fname = #{fname,jdbcType=VARCHAR},
+      </if>
+      <if test="fstatus != null" >
+        fstatus = #{fstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="fdate != null" >
+        fdate = #{fdate,jdbcType=DATE},
+      </if>
+      <if test="fpos != null" >
+        fpos = #{fpos,jdbcType=VARCHAR},
+      </if>
+      <if test="ftid != null" >
+        ftid = #{ftid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.lostandfound.model.Found" >
+    update found
+    set fuid = #{fuid,jdbcType=VARCHAR},
+      fimage = #{fimage,jdbcType=VARCHAR},
+      fname = #{fname,jdbcType=VARCHAR},
+      fstatus = #{fstatus,jdbcType=VARCHAR},
+      fdate = #{fdate,jdbcType=DATE},
+      fpos = #{fpos,jdbcType=VARCHAR},
+      ftid = #{ftid,jdbcType=INTEGER}
+    where fid = #{fid,jdbcType=INTEGER}
+  </update>
+  
+  <select id="getAll" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from found
+    where fstatus = 0
+  </select>
+  <select id="selectByPage" resultMap = "BaseResultMap">
+  select * 
+  from found 
+  where fstatus = 0
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  <select id="admingetAll" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from found
+  </select>
+  <select id="adminselectByPage" resultMap = "BaseResultMap">
+  select * 
+  from found
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  
+  <select id="getAllSelective" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from found
+    where fstatus = 0
+    <if test="record != null and record != ''">
+       AND fname LIKE "%"#{record}"%"
+   </if>
+  </select>
+  <select id="selectByPageSelective" resultMap = "BaseResultMap">
+  select * 
+  from found 
+  where fstatus = 0
+   <if test="record != null and record != ''">
+       AND fname LIKE "%"#{record}"%"
+   </if>
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  
+  <select id="getAllById" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select *
+    from found
+    where fuid = #{fuid,jdbcType=VARCHAR}
+    AND fstatus = 0
+  </select>
+  <select id="selectByPageById" resultMap = "BaseResultMap">
+  select * 
+  from found
+  where fuid = #{fuid,jdbcType=VARCHAR}
+  AND fstatus = 0
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  
+  <select id="getAllByType" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select *
+    from found
+    where ftid = #{ftid,jdbcType=INTEGER}
+    AND fstatus = 0
+  </select>
+  <select id="selectByPageByType" resultMap = "BaseResultMap">
+  select * 
+  from found
+  where ftid = #{ftid,jdbcType=INTEGER}
+  AND fstatus = 0
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  <select id="admingetAllByType" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select *
+    from found
+    where ftid = #{ftid,jdbcType=INTEGER}
+  </select>
+  <select id="adminselectByPageByType" resultMap = "BaseResultMap">
+  select * 
+  from found
+  where ftid = #{ftid,jdbcType=INTEGER}
+  order by fid desc limit #{from,jdbcType=INTEGER},#{count,jdbcType=INTEGER}
+  </select>
+  
+  <select id="selectTOP6" resultMap = "BaseResultMap">
+  select * 
+  from found
+  where fstatus = 0
+  order by fid desc limit 6
+  </select>
+</mapper>
